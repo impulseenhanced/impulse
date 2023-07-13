@@ -1,4 +1,5 @@
-© 2i games & vanilla Studios. All rights reserved. All trademarks are property of their respective owners in the UK and other countries.
+© 2i games. All rights reserved. All trademarks are property of their respective owners in the UK and other countries.
+© vanilla Studios. All rights reserved. All trademarks are property of their respective owners in the UK and other countries.
 
 # Welcome to impulse: Enhanced
 impulse: Enhanced is a project that aims to maintain & expand impulse Framework, by adding new features, code optimization, and many other things.
