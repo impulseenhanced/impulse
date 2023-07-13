@@ -2,7 +2,7 @@
 © vanilla Studios. All rights reserved. All trademarks are property of their respective owners in the UK and other countries.
 
 # Welcome to impulse: Enhanced
-impulse: Enhanced is a project that aims to maintain & expand impulse Framework, by adding new features, code optimization, and many other things.
+impulse: Enhanced is a fork, unofficial maintained version of impulse.
 
 ## Working with impulse
 [Check out the docs](https://avxsb.github.io/impulseenhanced). If you want to just get started read the ['Installing impulse: Enhanced' guide]([https://vingard.github.io/impulsedocs/topics/10-devsetup.md.htm](https://avxsb.github.io/impulseenchanced)l). Most of the framework features are or will be documented, so it's easy for you to get started.
