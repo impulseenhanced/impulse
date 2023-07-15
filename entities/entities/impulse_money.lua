@@ -31,6 +31,8 @@ if SERVER then
 
 	function ENT:Use(activator)
 		if activator:IsPlayer() then
+			hook.Run("OnPlayerPickupMoney", activator, self, (self.money or 69))
+			
 			self:Remove()
 			activator:GiveMoney(self.money)
 			activator:Notify("You have picked up "..impulse.Config.CurrencyPrefix..self.money..".")
