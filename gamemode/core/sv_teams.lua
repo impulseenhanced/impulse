@@ -3,6 +3,10 @@ function meta:SetTeam(teamID, forced)
 	local teamData = impulse.Teams.Data[teamID]
 	local teamPlayers = team.NumPlayers(teamID)
 
+	if ( hook.Run("CanPlayerChangeTeam", self, self:Team(), teamID) == false ) then
+		return
+	end
+
 	if teamData.model then
 		self:SetModel(teamData.model)
 	else

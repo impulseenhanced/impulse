@@ -38,6 +38,10 @@ if SERVER then
 			return
 		end
 
+		if not ( self:AchievementHas(name) ) then
+			return
+		end
+
 		self.impulseData.Achievements = self.impulseData.Achievements or {}
 		self.impulseData.Achievements[name] = nil
 		self:SaveData()
