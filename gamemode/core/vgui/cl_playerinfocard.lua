@@ -169,7 +169,7 @@ local quickTools = {
 		name = "IAC Flag",
 		icon = "icon16/flag_red.png",
 		onRun = function(ply, sid)
-			Derma_Query("BEFORE FLAGGING READ THE GUIDE AT: https://impulse-community.com/threads/how-to-iac-flag-a-user.3044/\nAre you sure you want to flag:\n"..ply:Nick().."("..ply:SteamName()..")?", "ops", "Yes", function()
+			Derma_Query("BEFORE FLAGGING READ THE GUIDE AT: .. " .. impulse.Config.IACGuidelinesURL .. "\nAre you sure you want to flag:\n"..ply:Nick().."("..ply:SteamName()..")?", "ops", "Yes", function()
 				LocalPlayer():ConCommand("say /iacflag "..sid)
 			end, "No, take me back!")
 		end
@@ -281,7 +281,7 @@ function PANEL:Init()
 				return
 			end
 
-			gui.OpenURL("https://impulse-community.com/api/getforumprofile.php?id="..self.Player:SteamID64())
+			gui.OpenURL(impulse.Config.CommunityURL.."/api/getforumprofile.php?id="..self.Player:SteamID64())
 		end
 
 		-- badges

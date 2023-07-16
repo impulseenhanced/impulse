@@ -284,7 +284,7 @@ function impulse.SetupPlayer(ply, dbData)
 	local userCount = totalCount - donorCount
 
 	if (not ply:IsDonator() and userCount >= (impulse.Config.UserSlots or 9999)) then
-		ply:Kick("The server is currently at full user capacity. Donate at panel.impulse-community.com to access additional donator slots")
+		ply:Kick("The server is currently at full user capacity. Donate at " .. impulse.Config.PanelURL .. " to access additional donator slots.")
 		return
 	end
 

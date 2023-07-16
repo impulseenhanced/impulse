@@ -1,7 +1,7 @@
 -- Define gamemode information.
 GM.Name = "impulse"
 GM.Author = "vin"
-GM.Website = "https://www.impulse-community.com"
+GM.Website = "https://2i.games"
 impulse.Version = 1.74
 MsgC( Color( 83, 143, 239 ), "[impulse] Starting shared load...\n" )
 meta = FindMetaTable("Player")

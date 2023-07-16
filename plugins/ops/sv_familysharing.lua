@@ -16,19 +16,19 @@ function PLUGIN:PlayerAuthed(ply, sid)
 
 		if not body or not body.response or not body.response.lender_steamid then
 			error(string.format("ops FamilySharing: Invalid Steam API response for %s | %s\n", ply:Nick(), ply:SteamID()))
-			ply:Kick("Sorry, we do not allow private Steam accounts to connect. For more information goto support.impulse-community.com")
+			ply:Kick("Sorry, we do not allow private Steam accounts to connect. For more information visit " .. impulse.Config.SupportURL .. ".")
 			return
 		end
 
 		local lender = body.response.lender_steamid
 		if lender != "0" then -- if does not own gmod
-			ply:Kick("Sorry, we do not allow Steam accounts that don't own the game fully. For more information goto support.impulse-community.com")
+			ply:Kick("Sorry, we do not allow Steam accounts that don't own the game fully. For more information visit " .. impulse.Config.SupportURL .. ".")
 			return
 		end
 	end,
 
 	function(code)
-		ply:Kick("Sorry, we do not allow private Steam accounts to connect. For more information goto support.impulse-community.com")
+		ply:Kick("Sorry, we do not allow private Steam accounts to connect. For more information visit " .. impulse.Config.SupportURL .. ".")
 	end
 	)
 end

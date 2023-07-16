@@ -24,7 +24,7 @@ hook.Add("iac.CheaterConvicted", "iacCheaterLog", function(steamid, code, caseIn
     local embeds = {
         title = "IAC ban issued",
         description = "Evidence-based conviction.",
-        url = "https://panel.impulse-community.com/index.php?t=admin_bans&id="..steamid,
+        url = impulse.Config.PanelURL .. "/index.php?t=admin_bans&id="..steamid,
         color = 16720932,
         fields = {
             {

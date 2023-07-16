@@ -12,7 +12,7 @@ function impulse.Ops.AutoMod.Ban(ply, reason, risk, details)
     end
 
     if GExtension then
-        GExtension:AddBan(ply:SteamID64(), 0, "AutoMod ban for suspected "..reason..". Appeal @ impulse-community.com for review.", "0", GExtension:CurrentTime(), function()
+        GExtension:AddBan(ply:SteamID64(), 0, "AutoMod ban for suspected "..reason..". Appeal at " .. impulse.Config.CommunityURL .. " for review.", "0", GExtension:CurrentTime(), function()
             GExtension:InitBans()
         end)
     end
@@ -20,7 +20,7 @@ function impulse.Ops.AutoMod.Ban(ply, reason, risk, details)
     local embeds = {
         title = "AutoMod ban issued",
         description = "User was identified as high risk by the automated moderator.\n<@&"..impulse.Config.DiscordLeadModRoleID.."> please investigate and review.",
-        url = "https://panel.impulse-community.com/index.php?t=admin_bans&id="..ply:SteamID64(),
+        url = impulse.Config.PanelURL .. "/index.php?t=admin_bans&id="..ply:SteamID64(),
         color = 7774976,
         fields = {
             {

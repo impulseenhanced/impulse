@@ -213,7 +213,7 @@ net.Receive("opsGiveWarn", function()
 	local template = "You have received a warning from a Game Moderator for a violation of the server rules.\nReason: "..reason.."\nPlease read the server rules again before continuing. Repeated offences will be punished by a ban."
 	local id = "warn_"..os.time()
 
-	impulse.MenuMessage.Add(id, "Warning Notice", template, Color(238, 210, 2), "https://panel.impulse-community.com/index.php?t=violations", "View more details")
+	impulse.MenuMessage.Add(id, "Warning Notice", template, Color(238, 210, 2), impulse.Config.PanelURL .. "/index.php?t=violations", "View more details")
 	impulse.MenuMessage.Save(id)
 end)
 
@@ -261,7 +261,7 @@ net.Receive("opsGetRecord", function()
 
 	if curScore != score and score > 3 then
 		impulse.MenuMessage.Remove("badsport")
-		impulse.MenuMessage.Add("badsport", "Poor Disciplinary Record Notice", template, col, "https://panel.impulse-community.com/index.php?t=violations", "View more details")
+		impulse.MenuMessage.Add("badsport", "Poor Disciplinary Record Notice", template, col, impulse.Config.PanelURL .. "/index.php?t=violations", "View more details")
 	end
 
 	cookie.Set("ops-record-badsportscore", score)

@@ -22,8 +22,8 @@ function PANEL:Init()
 	title:SizeToContents()
 
 	local sec1 = "You have been automatically or manually marked as a possible threat to the security and stability of our services.\n\n"
-	local sec2 = "As a result you will not be able to continue playing this server until the security check has been completed. Please note, this is not a ban, security checks are not always accurate and once the check is succsefully completed the incident will not be on record.\n\n"
-	local sec3 = "To complete the security check please goto our support page, login with this Steam account and select the 'Security Check' category for your ticket. Please note it normally takes 24 hours to complete a security check. Click the link below to begin."
+	local sec2 = "As a result you will not be able to continue playing this server until the security check has been completed. Please note, this is not a ban, security checks are not always accurate and once the check is successfully completed the incident will not be on record.\n\n"
+	local sec3 = "To complete the security check please visit our support page, login with this Steam account and select the 'Security Check' category for your ticket. Please note it normally takes 24 hours to complete a security check. Click the link below to begin."
 	local link = impulse.Config.SupportURL
 
 	local desc = vgui.Create("DLabel", self)
@@ -37,7 +37,7 @@ function PANEL:Init()
 	local linkBtn = vgui.Create("DLabel", self)
 	linkBtn:SetPos(140, 420)
 	linkBtn:SetFont("Impulse-Elements19-Shadow")
-	linkBtn:SetText("www.support.impulse-community.com")
+	linkBtn:SetText("Support Page")
 	linkBtn:SetTextColor(Color(51, 102, 187))
 	linkBtn:SizeToContents()
 	linkBtn:SetMouseInputEnabled(true)

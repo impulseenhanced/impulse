@@ -116,7 +116,7 @@ if GExtension then
                     local embeds = {
                         title = "Manual ban issued",
                         description = "User was banned by a staff member.",
-                        url = "https://panel.impulse-community.com/index.php?t=admin_bans&id="..steamid,
+                        url = impulse.Config.PanelURL .. "/index.php?t=admin_bans&id="..steamid,
                         color = 8801791,
                         fields = {
                             {
@@ -187,7 +187,7 @@ if GExtension then
                 local embeds = {
                     title = "Warning issued",
                     description = "User was warned by a staff member.",
-                    url = "https://panel.impulse-community.com/index.php?t=admin_warnings&id="..steamid,
+                    url = impulse.Config.PanelURL .. "/index.php?t=admin_warnings&id="..steamid,
                     color = 16774400,
                     fields = {
                         {
