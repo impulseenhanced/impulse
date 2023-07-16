@@ -62,6 +62,10 @@ if SERVER then
 				net.WriteEntity(self)
 				net.Send(activator)				
 			elseif activator:CanHoldItem(self.Item.UniqueID) then
+				if not canUseItemHook and failureMessage and #failureMessage > 0 then
+    					return activator:Notify(failureMessage)
+				end
+
 				if self.BannedUser and self.BannedUser == activator then
 					return activator:Notify("You are not allowed to pick up this item.")
 				end
