@@ -8,5 +8,5 @@ function PLUGIN:PlayerAuthed(ply, sid)
 	
 	if o64id == s64id then return end
 	
-	ply:Kick("Sorry, we do not allow Steam accounts that don't own the game fully. For more information goto support.impulse-community.com")
+	ply:Kick("Sorry, we do not allow Steam accounts that don't own the game fully. For more information visit " .. impulse.Config.SupportURL .. ".")
 end
