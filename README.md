@@ -9,10 +9,10 @@
 impulse: Enhanced is a fork, unofficial maintained version of impulse.
 
 ## Working with impulse
-[Check out the docs](https://avxsb.github.io/impulseenhanced). If you want to just get started read the ['Installing impulse: Enhanced' guide]([https://vingard.github.io/impulsedocs/topics/10-devsetup.md.htm](https://avxsb.github.io/impulseenchanced)l). Most of the framework features are or will be documented, so it's easy for you to get started.
+[Check out the docs](https://impulseenhanced.github.io/documentation/). If you want to just get started read the ['Installing impulse: Enhanced' guide](https://impulseenhanced.github.io/documentation/manual/10-devsetup/). Most of the framework features are or will be documented, so it's easy for you to get started.
 
 ### Public schemas
-* [impulse: Enhanced - Skeleton Schema](https://github.com/avxsb/impulse-enhanced-skeleton) - A very simple schema that provides basic configuration of the gamemode.
+* [impulse: Enhanced - Skeleton Schema](https://github.com/impulseenhanced/skeleton-schema) - A very simple schema that provides basic configuration of the gamemode.
 
 ## Licensing
 Read the full license in the 'LICENSE' file.
