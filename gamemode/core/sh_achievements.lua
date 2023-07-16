@@ -38,7 +38,7 @@ if SERVER then
 			return
 		end
 
-		if not ( self:AchievementHas(name) ) then
+		if not self:AchievementHas(name) then
 			return
 		end
 
