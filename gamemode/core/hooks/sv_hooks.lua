@@ -522,6 +522,14 @@ function GM:PlayerSay(ply, text, teamChat, newChat)
 
 			text = string.sub(text, string.len(args[1]) + 2)
 
+			if command.realm == "CLIENT" then
+				net.Start("impulseCLChatCommand")
+					net.WriteString(args[1])
+				net.Send(ply)
+				return ""
+			end
+
+
 			table.remove(args, 1)
 			command.onRun(ply, args, text)
 		else

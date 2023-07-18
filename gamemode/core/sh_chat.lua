@@ -2,6 +2,10 @@
 impulse.chatCommands = impulse.chatCommands or {}
 impulse.chatClasses = impulse.chatClasses or {}
 
+--- Registers a chat command.
+-- @realm shared
+-- @string name Command name
+-- @table cmdData Command data
 function impulse.RegisterChatCommand(name, cmdData)
 	if not cmdData.adminOnly then cmdData.adminOnly = false end
 	if not cmdData.leadAdminOnly then cmdData.leadAdminOnly = false end
@@ -9,6 +13,7 @@ function impulse.RegisterChatCommand(name, cmdData)
 	if not cmdData.description then cmdData.description = "" end
 	if not cmdData.requiresArg then cmdData.requiresArg = false end
 	if not cmdData.requiresAlive then cmdData.requiresAlive = false end
+	if not cmdData.realm then cmdData.realm = "SERVER" end
 
     impulse.chatCommands[name] = cmdData
 end

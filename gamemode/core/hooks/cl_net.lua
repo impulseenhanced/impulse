@@ -615,3 +615,11 @@ net.Receive("impulseGetButtons", function()
 		impulse_ActiveButtons[entIndex] = buttonId
 	end
 end)
+
+net.Receive("impulseCLChatCommand", function()
+	local cmd = net.ReadString()
+
+	if impulse.chatCommands[cmd] and impulse.chatCommands[cmd].onRun then
+		impulse.chatCommands[cmd].onRun()
+	end
+end)
