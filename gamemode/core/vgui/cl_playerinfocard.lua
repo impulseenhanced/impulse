@@ -165,15 +165,6 @@ local quickTools = {
 			addDay.DoClick = function() addTime(259200) end
 		end
 	},
-	{
-		name = "IAC Flag",
-		icon = "icon16/flag_red.png",
-		onRun = function(ply, sid)
-			Derma_Query("BEFORE FLAGGING READ THE GUIDE AT: .. " .. impulse.Config.IACGuidelinesURL .. "\nAre you sure you want to flag:\n"..ply:Nick().."("..ply:SteamName()..")?", "ops", "Yes", function()
-				LocalPlayer():ConCommand("say /iacflag "..sid)
-			end, "No, take me back!")
-		end
-	}
 }
 
 
