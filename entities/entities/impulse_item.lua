@@ -62,7 +62,7 @@ if SERVER then
 				net.WriteEntity(self)
 				net.Send(activator)				
 			elseif activator:CanHoldItem(self.Item.UniqueID) then
-				local canUseItemHook, failureMessage = hook.Run("CanPlayerPickupInventoryItem")
+				local canUseItemHook, failureMessage = hook.Run("CanPlayerPickupInventoryItem", activator)
 				
 				if not canUseItemHook and failureMessage and #failureMessage > 0 then
     					return activator:Notify(failureMessage)
