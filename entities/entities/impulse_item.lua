@@ -65,7 +65,7 @@ if SERVER then
 				local canUseItemHook, failureMessage = hook.Run("CanPlayerPickupInventoryItem", activator)
 				
 				if not canUseItemHook and failureMessage and #failureMessage > 0 then
-    					return activator:Notify(failureMessage)
+    				return activator:Notify(failureMessage)
 				end
 
 				if self.BannedUser and self.BannedUser == activator then
