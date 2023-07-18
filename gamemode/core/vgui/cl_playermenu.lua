@@ -401,26 +401,42 @@ function PANEL:Info()
 	local commands = vgui.Create("DScrollPanel", self.infoSheet)
 	commands:Dock(FILL)
 
-	for v,k in pairs(impulse.chatCommands) do
+	local isAdmin = LocalPlayer():IsAdmin()
+	local isLeadAdmin = LocalPlayer():IsLeadAdmin()
+	local isSuperAdmin = LocalPlayer():IsSuperAdmin()
+
+	for k,v in pairs(impulse.chatCommands) do
 		local c = impulse.Config.MainColour
  						
- 		if k.adminOnly == true and LocalPlayer():IsAdmin() == false then 
- 			continue 
- 		elseif k.adminOnly == true then
- 			c = impulse.Config.InteractColour
- 		end
- 						
- 		if k.superAdminOnly == true and LocalPlayer():IsSuperAdmin() == false then 
- 			continue 
- 		elseif k.superAdminOnly == true then
- 			c = Color(255, 0, 0, 255)
- 		end
+		if v.adminOnly then
+			if isAdmin then
+				c = impulse.Config.InteractColour
+			else
+				continue 
+			end
+		end
+
+		  if v.leadAdminOnly then
+			if isLeadAdmin or isSuperAdmin then
+				c = Color(128, 0, 128)
+			else
+				continue
+			end
+		end
+		
+		 if v.superAdminOnly then
+			if isSuperAdmin then
+				c = Color(255, 0, 0, 255)
+			else
+				continue 
+			end
+		end
 
 		local command = commands:Add("DPanel", commands)
 		command:SetTall(40)
 		command:Dock(TOP)
-		command.name = v
-		command.desc = k.description
+		command.name = k
+		command.desc = v.description
 		command.col = c
 
 		function command:Paint()
