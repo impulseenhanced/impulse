@@ -498,6 +498,16 @@ function GM:PostProcessPermitted()
 	return false
 end
 
+function GM:OnScreenSizeChanged(oldWidth, oldHeight)
+	if IsValid(PlayerIcon) then
+		PlayerIcon:Remove()
+	end
+
+	if impulse.chatBox and IsValid(impulse.chatBox.frame) then
+		impulse.chatBox.frame:Remove()
+	end
+end
+
 concommand.Add("impulse_togglethirdperson", function() -- ease of use command for binds
 	impulse.SetSetting("view_thirdperson", (!impulse.GetSetting("view_thirdperson")))
 end)
