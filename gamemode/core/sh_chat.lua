@@ -49,7 +49,7 @@ local oocCommand = {
 	requiresArg = true,
 	onRun = function(ply, arg, rawText)
 		if impulse.OOCClosed then
-			return ply:Notify("OOC chat has been suspsended and will return shortly.")	
+			return ply:Notify("OOC chat has been suspended and will return shortly.")	
 		end
 
 		local timeout = impulse.OOCTimeouts[ply:SteamID()]
