@@ -13,6 +13,7 @@ impulse: Enhanced is a fork, unofficial maintained version of impulse.
 
 ### Public schemas
 * [impulse: Enhanced - Skeleton Schema](https://github.com/impulseenhanced/skeleton-schema) - A very simple schema that provides basic configuration of the gamemode.
+* [Riggs' HL2RP Schema](https://github.com/riggs9162/impulsehl2rp-skeleton) - A basic, unofficial HL2RP schema.
 
 ## Licensing
 Read the full license in the 'LICENSE' file.
