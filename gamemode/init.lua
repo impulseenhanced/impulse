@@ -1,4 +1,4 @@
-resource.AddWorkshop("1651398810") -- framework content
+resource.AddWorkshop("3010264401") -- Impulse: Enhanced framework Content
 
 DeriveGamemode("sandbox")
 
