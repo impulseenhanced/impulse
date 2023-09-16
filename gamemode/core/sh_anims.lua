@@ -453,8 +453,12 @@ do
 			self.impulseSeqCallback = callback
 			self.impulseForceSeq = sequence
 
-			if not noFreeze then
+			local plyfreezedbool = noFreeze
+
+			if plyfreezedbool and not self:GetMoveType(MOVETYPE_NOCLIP) then
 				self:SetMoveType(MOVETYPE_NONE)
+			else
+				self:SetMoveType(MOVETYPE_WALK)
 			end
 
 			if time > 0 then
