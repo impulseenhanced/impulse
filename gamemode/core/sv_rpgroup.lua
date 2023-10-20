@@ -68,7 +68,7 @@ end
 
 function impulse.Group.DBRemovePlayer(steamid, groupid)
 	local query = mysql:Update("impulse_players")
-	query:Update("rpgroup", nil)
+	query:Update("rpgroup", 0)
 	query:Update("rpgrouprank", "")
 	query:Where("steamid", steamid)
 	query:Execute()
@@ -76,7 +76,7 @@ end
 
 function impulse.Group.DBRemovePlayerMass(groupid)
 	local query = mysql:Update("impulse_players")
-	query:Update("rpgroup", nil)
+	query:Update("rpgroup", 0)
 	query:Update("rpgrouprank", "")
 	query:Where("rpgroup", groupid)
 	query:Execute()
